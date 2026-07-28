@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.main-header {
+    background: linear-gradient(135deg, #ff9933, #ff9933);
+    color: #fff;
+    padding: 18px 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Center alignment */
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo-title-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.emblem-logo {
+    height: 70px;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.header-text h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header-text h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #e2f1ff;
+}
+
+.header-text h3 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+/* Clock Card */
+.clock-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: right;
+}
+
+.date-display {
+    font-size: 0.85rem;
+    color: #e2f1ff;
+    font-weight: 500;
+}
+
+.time-display {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Main Dashboard */
+.dashboard-container {
+    max-width: 1400px;
+    width: 92%;
+    margin: 25px auto;
+    flex: 1;
+}
+
+/* Search Bar */
+.search-section {
+    margin-bottom: 25px;
+}
+
+.search-box {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border-radius: 30px;
+    border: 2px solid #ddd;
+    outline: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.search-box input:focus {
+    border-color: #1b6ca8;
+    box-shadow: 0 4px 12px rgba(27, 108, 168, 0.2);
+}
+
+.search-box i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Section Box */
+.dash-section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.section-icon {
+    font-size: 1.3rem;
+    color: #0f4c81;
+}
+
+.section-header h2 {
+    font-size: 1.2rem;
+    color: #0f4c81;
+    font-weight: 600;
+}
+
+/* Grid System for Buttons */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Generic Button Style */
+.dash-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
+}
+
+.dash-btn i {
+    font-size: 1.2rem;
+}
+
+.dash-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+/* Section Wise Specific Colors */
+.btn-telemedicine { background: linear-gradient(135deg, #6a11cb, #2575fc); color: #fff; }
+.btn-report { background: linear-gradient(135deg, #ff9a9e, #fecfef); color: #88162e; }
+.btn-govt { background: linear-gradient(135deg, #a18cd1, #fbc2eb); color: #4b0082; }
+.btn-sheet { background: linear-gradient(135deg, #84fab0, #8fd3f4); color: #004d40; }
+
+.btn-disabled {
+    background: #e0e0e0 !important;
+    color: #888 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none !important;
+}
+
+/* Footer */
+.main-footer {
+    background: #0f4c81;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .clock-card {
+        text-align: center;
+    }
+    .logo-title-group {
+        flex-direction: column;
+    }
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+}
